@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <form>
+        Name: <input type="text" name="sname" id="sname"><br/>
+        Age: <input type="text" name="sage" id="sage"><br>
+        <input type="button" value="Submit" onClick="writeValues(form)"><br>
+        The Name is: <span id="fullname"></span><br />
+        Age: <span id="agee"></span><br>
+      </form>
+    <script>
+        window.writeValues = function(form) {
+  var name = form.sname.value;
+  var age = form.sage.value;
+
+  document.getElementById('fullname').innerHTML = name
+  document.getElementById("agee").innerHTML = age
+}
+    </script>
+</body>
+</html>
